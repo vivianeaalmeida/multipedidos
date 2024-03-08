@@ -10,7 +10,7 @@ grey: #999b9d
 
 :root{
     --green: #119396;
-    --orange: #f94701;
+    --orange: #ff4b10;
     --orange-medium: #ff6802;
     --orange-lighter: #fedcce;
     --white: #ffffff;
@@ -30,13 +30,89 @@ grey: #999b9d
 }
 
 .menu{
-    
+    flex: 2;
+    background-color: var(--orange);
+    justify-content: center;
+    text-align: center;
+}
+
+.logo{
+    border-radius: 3rem;
+}
+
+.title{
+   margin: 4rem;
+   font-size: larger;
+}
+
+.list-of-options{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .principal{
+    flex: 6;
+    background-color: var(--orange-lighter)
+}
 
+.search{
+    justify-content: center;
+    text-align: center;
+    margin: 2rem;
+}
+
+.search-bar{
+    
+}
+
+.search-name{
+    padding: 0 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+.list-of-motoboys{
+    display: flex;
+    gap: 5rem;
+    margin: 2rem 0;
+    padding: 1rem;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.list-of-motoboys button{
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    border-radius: 1rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.edit{
+    background-color: #11949680;
+}
+
+.edit:hover{
+    background-color: var(--green)
+}
+
+.delete{
+    background-color: #ff4c107c;
+}
+
+.delete:hover{
+    background-color: var(--orange)
 }
 
 .info{
+    flex: 2;
+    background-color: var(--orange-medium);
+    
+}
 
+.info-motoboy{
+    margin: 4rem;
 }
