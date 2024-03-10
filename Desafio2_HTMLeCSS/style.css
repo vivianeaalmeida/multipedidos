@@ -17,6 +17,10 @@ grey: #999b9d
     --grey: #999b9d;
 }
 
+body, html{
+    height: 100%;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -27,6 +31,7 @@ grey: #999b9d
 
 .homepage{
     display: flex;
+    height: 100%;
 }
 
 .menu{
@@ -51,44 +56,97 @@ grey: #999b9d
     gap: 1rem;
 }
 
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+a:hover{
+    color: black;
+}
+
 .principal{
-    flex: 6;
+    flex: 5;
     background-color: var(--orange-lighter)
 }
 
-.search{
-    justify-content: center;
-    text-align: center;
-    margin: 2rem;
-}
-
-.search-bar{
-    
-}
-
-.search-name{
-    padding: 0 2rem;
-    border: none;
-    border-radius: 1rem;
-}
-
-.list-of-motoboys{
+.wrap{
     display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.search {
+    width: 50%;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid var(--green);
+    border-radius: 2rem 0 0 2rem;
+    border-right: none;
+    padding: 5px;
+    height: 100%;
+    outline: none;
+    color: var(--green);
+  }
+  
+  .searchTerm:focus{
+    color: var(--green);
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid var(--green);
+    background: var(--green);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 2rem 2rem;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+.item-of-list{
+    display: none;
     gap: 5rem;
     margin: 2rem 0;
     padding: 1rem;
     text-align: center;
     justify-content: center;
     background-color: var(--white);
+    transition: none !important;
 }
 
-.list-of-motoboys button{
+.item-of-list button{
     width: 8rem;
     height: 2rem;
     border: none;
     border-radius: 1rem;
     color: var(--white);
     cursor: pointer;
+}
+
+.item-of-list:hover {
+    cursor: pointer;
+}
+
+.info-personal{
+    display: flex;
+    flex-direction: column;
+    flex: 7;
+    text-align: start;
+    gap: 1rem;
+    
+}
+
+.action-buttons{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    gap: 0.5rem;
+
 }
 
 .edit{
@@ -108,11 +166,16 @@ grey: #999b9d
 }
 
 .info{
-    flex: 2;
     background-color: var(--orange-medium);
+    display: none;
+    flex: 3;
+    justify-content: center;
+    align-items: center;
     
 }
 
 .info-motoboy{
-    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 }

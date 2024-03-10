@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="script.js"></script>
     <title>MULTIPEDIDOS - Gestão de Motoboys</title>
+    <script type="text/javascript">
+        function onInit() {
+            resetList();
+            renderList();
+        }
+        window.onload = onInit;
+    </script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -14,43 +23,55 @@
                 <img class="logo" src="./assets/logo2.png" width="70rem" alt="">
             </div>
             <div class="list-of-options">
-                <p>Início</p>
-                <p>Motoboys</p>
-                <p>Suporte</p>
-                <p>Configurações</p>
+                <a href="#">Início</a>
+                <a href="#">Motoboys</a>
+                <a href="#">Suporte</a>
+                <a href="#">Configurações</a>
             </div>
         </section>
         <!--LISTA MOTOBOYS-->
         <section class="principal">
             <!--Search Bar-->
-            <div class="search">
-                <div class="search-bar">
-                   <input type="text" class="search-name" placeholder="Pesquise por nome...">
-                   <button type="submit" class="search-btn">
+            <div class="wrap">
+                <div class="search">
+                   <input type="text" class="searchTerm" id="searchValue" placeholder="Pesquise por nome">
+                   <button type="submit" class="searchButton" onclick="renderList()">
                      <i class="fa fa-search"></i>
                   </button>
                 </div>
              </div>
             <!--Lista-->
             <div class="list-of-motoboys">
-                <p class="p-name-motoboys">Nome</p>
-                <p class="p-num-register">Nº Registro</p>
-                <button class="edit">Editar</button>
-                <button class="delete">Excluir</button>
+                <div onclick="showInfo()" class="item-of-list">
+                    <div class="info-personal">
+                        <p class="p-name-motoboys">Nome</p>
+                        <p class="p-num-register">Nº Registro</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="edit" >Editar</button>
+                        <button class="delete">Excluir</button>
+                    </div>
+                </div>
             </div>
+           
     
         </section>
         <!--INFORMAÇÕES MOTOBOY SELECIONADO-->
-        <section class="info">
+        <section class="info" id="detail-info-motoboy">
             <div class="info-motoboy">
                 <div class="picture">
-                    <img class="img-motoboy" src="./assets/deliveryguy.png" width="70rem" alt="Foto do Motoboy">
+                    <img class="img-motoboy" src="./assets/motoboy1.png" width="70rem" alt="Foto do Motoboy">
                 </div>
+                
                 <div class="personal">
                     <p>Nome: </p>
-                    <p>Placa Do Veículo: </p>
+                    <p id="detail-name"> </p>
+                    <p>Placa Moto: </p>
+                    <p id="detail-license"></p>
                     <p>Telefone: </p>
+                    <p id="detail-phone"></p>
                     <p>E-mail: </p>
+                    <p id="detail-mail"></p>
                 </div>
                 
             </div>
