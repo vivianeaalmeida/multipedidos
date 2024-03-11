@@ -125,12 +125,14 @@ a:hover{
 .item-of-list{
     display: none;
     gap: 5rem;
-    margin: 2rem 0;
+    margin: 2rem;
+    border-radius: 0.5rem;
     padding: 1rem;
     text-align: center;
     justify-content: center;
     background-color: var(--white);
     transition: none !important;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .item-of-list button{
