@@ -103,10 +103,24 @@ a:hover{
     background: var(--green);
     text-align: center;
     color: #fff;
-    border-radius: 0 2rem 2rem;
+    border-radius: 0 2rem 2rem 0;
     cursor: pointer;
     font-size: 20px;
   }
+
+.list-of-motoboys{
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.list-of-motoboys::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.list-of-motoboys::-webkit-scrollbar-thumb {
+    background: transparent;
+}
 
 .item-of-list{
     display: none;
@@ -141,6 +155,26 @@ a:hover{
     
 }
 
+.personal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white);
+}
+
+.p-bold{
+    font-weight: bolder;
+    color: black;
+}
+
+.picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .action-buttons{
     display: flex;
     flex-direction: column;
@@ -168,6 +202,7 @@ a:hover{
 .info{
     background-color: var(--orange-medium);
     display: none;
+    flex-direction: column;
     flex: 3;
     justify-content: center;
     align-items: center;
@@ -178,4 +213,38 @@ a:hover{
     display: flex;
     flex-direction: column;
     gap: 4rem;
+}
+
+/*Media queries */
+@media only screen and (min-width: 768px) {
+   .principal{
+    display: block;
+    
+   }
+
+   .back-button{
+    display: none;
+   }
+}
+
+@media only screen and (max-width: 767px) {
+    .principal{
+       display: none;
+    }
+
+    .back-button{
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 999;      
+        border: 1px solid var(--white);
+        background: var(--white);
+        text-align: center;
+        color: #000000;
+        border-radius: 2rem;
+        cursor: pointer;
+        font-size: 20px;  
+        padding: 10px;
+    }
 }

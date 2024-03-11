@@ -8,8 +8,7 @@
     <title>MULTIPEDIDOS - Gestão de Motoboys</title>
     <script type="text/javascript">
         function onInit() {
-            resetList();
-            renderList();
+            loadInitialList();
         }
         window.onload = onInit;
     </script>
@@ -23,14 +22,17 @@
                 <img class="logo" src="./assets/logo2.png" width="70rem" alt="">
             </div>
             <div class="list-of-options">
-                <a href="#">Início</a>
-                <a href="#">Motoboys</a>
+                <a onclick="showMainContent()">Início</a>
+                <a onclick="showMainContent()">Motoboys</a>
                 <a href="#">Suporte</a>
                 <a href="#">Configurações</a>
             </div>
         </section>
         <!--LISTA MOTOBOYS-->
-        <section class="principal">
+        <section class="principal" id="main-list">
+            <button class="back-button" onclick="hideMenu(false); hideMainList(true)">
+                Voltar
+            </button>
             <!--Search Bar-->
             <div class="wrap">
                 <div class="search">
@@ -42,7 +44,7 @@
              </div>
             <!--Lista-->
             <div class="list-of-motoboys">
-                <div onclick="showInfo()" class="item-of-list">
+                <div class="item-of-list">
                     <div class="info-personal">
                         <p class="p-name-motoboys">Nome</p>
                         <p class="p-num-register">Nº Registro</p>
@@ -58,19 +60,22 @@
         </section>
         <!--INFORMAÇÕES MOTOBOY SELECIONADO-->
         <section class="info" id="detail-info-motoboy">
+            <button class="back-button" onclick="showMainContent()">
+                Voltar
+            </button>
             <div class="info-motoboy">
                 <div class="picture">
                     <img class="img-motoboy" src="./assets/motoboy1.png" width="70rem" alt="Foto do Motoboy">
                 </div>
                 
                 <div class="personal">
-                    <p>Nome: </p>
+                    <p class="p-bold"><b>Nome </b></p>
                     <p id="detail-name"> </p>
-                    <p>Placa Moto: </p>
+                    <p class="p-bold">Placa Moto </p>
                     <p id="detail-license"></p>
-                    <p>Telefone: </p>
+                    <p class="p-bold">Telefone </p>
                     <p id="detail-phone"></p>
-                    <p>E-mail: </p>
+                    <p class="p-bold">E-mail </p>
                     <p id="detail-mail"></p>
                 </div>
                 
